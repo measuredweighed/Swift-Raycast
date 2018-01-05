@@ -6,7 +6,7 @@ The `Intersectable` protocol defines a data structure that is capable of testing
 
 Below is an example of a successful Ray -> Sphere intersection test:
 
-```
+```swift
 let sphere = Sphere(position: Vector3.zero, rotation: Quaternion.identity, radius: 5)
 let ray = Ray(origin: Vector3(0, 0, 10), direction: Vector3(0, 0, -1))
 if let intersection = sphere.intersects(ray: ray) {
@@ -18,7 +18,7 @@ Also included is a primitive `Triangle` implementation (which may seem oddly pri
 
 Below is an example of a successful Ray -> Triangle intersection test:
 
-```
+```swift
 let vA = Vertex(coord: Vector3(0, 1, 0))
 let vB = Vertex(coord: Vector3(-1, 0, 0))
 let vC = Vertex(coord: Vector3(1, 0, 0))
@@ -35,7 +35,7 @@ Large numbers of intersection tests can be a performance bottleneck. One way of 
 
 Below is an example of using a BVH that queries a collection of 40,000 `Sphere` instances and returns a small subset for further testing.
 
-```
+```swift
 var intersectables = [Intersectable]()
 for y:Scalar in stride(from: -100, to: 100, by: 1) {
     for x:Scalar in stride(from: -100, to: 100, by: 1) {
@@ -55,11 +55,15 @@ It's important to note that the BVH implementation here is by no means optimised
 ## Transforms
 Also included is a very bare-bones implementation of a `Transform` class - useful for describing the position, rotation and scale of a 3D object. `Transform` objects can be queried for their worldMatrix (and will cache the resultant object until being dirtied again):
 
-```object.matrix```
+```swift
+object.matrix
+```
 
 ## Vectors and Matrices
 This collection of code makes use of Nick Lockwood's excellent [VectorMath](https://github.com/nicklockwood/VectorMath) library - which I've included a (slightly modified) version of here for completeness.
 
 All code makes use of a `Scalar` type, which is simply typealiased in `VectorMath.swift` like so:
 
-```public typealias Scalar = Double```
+```swift
+public typealias Scalar = Double
+```
