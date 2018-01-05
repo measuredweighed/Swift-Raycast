@@ -1,8 +1,8 @@
 //
 //  Triangle.swift
-//  BVH
+//  Swift-Raycast
 //
-//  Created by Nial Giacomelli on 05/01/2018.
+//  Created by @measuredweighed on 05/01/2018.
 //  Copyright © 2018 UglyApps. All rights reserved.
 //
 

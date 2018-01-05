@@ -1,8 +1,8 @@
 //
 //  ray.swift
-//  Swift-BVH
+//  Swift-Raycast
 //
-//  Created by Nial Giacomelli on 02/08/2017.
+//  Created by @measuredweighed on 02/08/2017.
 //  Copyright © 2017 UglyApps. All rights reserved.
 //
 
